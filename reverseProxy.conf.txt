@@ -1,0 +1,11 @@
+<VirtualHost *:80>
+        ServerName sitejetty
+        ServerAdmin webmaster@localhost
+
+        # attention / final !!!
+        ProxyPass /  http://sitejetty:8080/
+        ProxyPassReverse / http://sitejetty:8080/
+
+        ErrorLog ${APACHE_LOG_DIR}/siteReverse_error.log
+        CustomLog ${APACHE_LOG_DIR}/siteReverse_access.log combined
+</VirtualHost>

@@ -1,0 +1,17 @@
+version : '1' 
+services :
+  myapp1 :
+    build :
+      context : ./Dockerfile/
+    ports:
+      - 8090:80
+  myapp2 :
+    build :
+      context : ./Dockerfile/
+    ports:
+      - 8091:80  
+  myapp3 :
+    build :
+      context : ./Dockerfile/
+    ports:
+      - 8092:80

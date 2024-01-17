@@ -1,0 +1,14 @@
+# hosts : liste des hosts où le playbook s'appliquera
+- hosts: localhost
+  tasks:
+# name : description de la tâche
+  - name: "create user "
+    user:
+      name: "test"
+      state: present
+      group: "ipl2"
+
+  - name: "install terraform"
+    apt:
+      name: terraform
+      state: present

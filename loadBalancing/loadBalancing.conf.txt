@@ -1,0 +1,12 @@
+<VirtualHost *:80>
+        ServerName nodejs_ipshow
+
+        <Proxy balancer://mycluster>
+            BalancerMember http://127.0.0.1:8090
+            BalancerMember http://127.0.0.1:8091
+            BalancerMember http://127.0.0.1:8092
+        </Proxy>
+        ProxyPreserveHost On
+        ProxyPass / balancer://mycluster/
+        ProxyPassReverse / balancer://mycluster/
+</VirtualHost>
