@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "O:\\OneDrive\\Haute Ecole Léonard de Vinci\\Groupe Admin Infra - General\\2021-2022\\Labos\\04\\WebApplication2\\WebApplication2.csproj": {}
+    "C:\\Users\\hamza\\Desktop\\docker\\dotnet_deploy_apache_inside_docker\\WebApplication2\\WebApplication2.csproj": {}
   },
   "projects": {
-    "O:\\OneDrive\\Haute Ecole Léonard de Vinci\\Groupe Admin Infra - General\\2021-2022\\Labos\\04\\WebApplication2\\WebApplication2.csproj": {
+    "C:\\Users\\hamza\\Desktop\\docker\\dotnet_deploy_apache_inside_docker\\WebApplication2\\WebApplication2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "O:\\OneDrive\\Haute Ecole Léonard de Vinci\\Groupe Admin Infra - General\\2021-2022\\Labos\\04\\WebApplication2\\WebApplication2.csproj",
+        "projectUniqueName": "C:\\Users\\hamza\\Desktop\\docker\\dotnet_deploy_apache_inside_docker\\WebApplication2\\WebApplication2.csproj",
         "projectName": "WebApplication2",
-        "projectPath": "O:\\OneDrive\\Haute Ecole Léonard de Vinci\\Groupe Admin Infra - General\\2021-2022\\Labos\\04\\WebApplication2\\WebApplication2.csproj",
-        "packagesPath": "C:\\Users\\Olivier\\.nuget\\packages\\",
-        "outputPath": "O:\\OneDrive\\Haute Ecole Léonard de Vinci\\Groupe Admin Infra - General\\2021-2022\\Labos\\04\\WebApplication2\\obj\\",
+        "projectPath": "C:\\Users\\hamza\\Desktop\\docker\\dotnet_deploy_apache_inside_docker\\WebApplication2\\WebApplication2.csproj",
+        "packagesPath": "C:\\Users\\hamza\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\hamza\\Desktop\\docker\\dotnet_deploy_apache_inside_docker\\WebApplication2\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Olivier\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hamza\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -58,10 +55,29 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.32, 3.1.32]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -70,7 +86,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }
