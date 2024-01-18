@@ -12,3 +12,52 @@
     apt:
       name: terraform
       state: present
+
+      
+      # THIS PLAYBOOK MUST BE LAUNCHED IN ROOT !
+# name of the playbook
+- name: "Install Exoplanets(nodejs) site"
+  # Install only on localhost machine
+  hosts: localhost
+  # Collect info on the system IP Adress, OS information, ....
+  # performance cost !
+  gather_facts: false
+  tasks:
+    - name: "Install nodejs"
+      # this will be executed with root account
+      #become: true
+      apt:
+        update_cache: yes
+        name:
+         - nodejs
+         - npm
+        state: present
+
+    - name: "git clone public repo"
+      ansible.builtin.git:
+        repo: https://gitlab.vinci.be/olivier.choquet/exoplanets_infra.git
+        dest:  /home/azuresouli/s6_ansible/exoplanets_site
+
+
+    - name: "Build app"
+      command: npm install
+      args:
+        chdir:  /home/azuresouli/s6_ansible/exoplanets_site
+
+    - name: "Start app"
+      command: npm start
+      args:
+        chdir: /home/azuresouli/s6_ansible/exoplanets_site
+
+
+#pm2 -h pm2 status pm2 start pm2 stop
+    - name: Install PM2
+      npm:
+        name: pm2
+        global: yes
+
+   # - name: Start App
+    #  command: pm2 start npm -- start
+     # args:
+#       chdir:  /home/azuresouli/s6_ansible/exoplanets_site
+
